@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is an online student registration form">
+    <link rel="icon" href="./IconImage.png">
+    <link rel="stylesheet" href="./Registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Student Registration System</title>
+</head>
+
+<body>
+    <header>
+        <h1>Student Registration System</h1>
+        <p>This is a registration form for all students interested in registering for the drawing competition. You
+            can easily enter the details and click the submit button. Later, you can edit or delete your application.
+        </p>
+    </header>
+    <main>
+        <!-- Form registering -->
+        <section class="form-section">
+            <form id="registrationForm" action="" method="">
+                <div><label for="name" class="label">Name</label>
+                    <input type="text" id="name" name="Name" class="inputText" required>
+                </div>
+                <div><label for="id" class="label">ID</label>
+                    <input type="number" id="id" name="Id" class="inputText" required>
+                </div>
+
+                <div><label for="email" class="label">Email</label>
+                    <input type="email" id="email" name="Email" class="inputText" required>
+                </div>
+
+                <div><label for="phone" class="label"> Phone</label>
+                    <input type="tel" id="phone" name="Phone" pattern="[0-9]{10}" class="inputText" required>
+                </div>
+                <div> <input type="submit" class="button" value="Submit">
+                </div>
+            </form>
+        </section>
+
+        <!-- List of registered students -->
+        <section class="list-section">
+
+            <h2>Registered Students</h2>
+            <table id="studentsTable">
+                <thead>
+                    <tr>
+                        <th class="p">ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th><i class="fa-solid fa-pen-to-square"></i></th>
+                        <th><i class="fa-duotone fa-solid fa-trash"></i></th>
+                        <th id="save" style="display:none">Save</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <script src="./Registration.js">
+
+    </script>
+
+</body>
+
+</html>
